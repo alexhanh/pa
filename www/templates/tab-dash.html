@@ -1,0 +1,13 @@
+<ion-view title="Dashboard">
+  <ion-content class="padding">
+    <h1>Alex Hanhikoski</h1>
+    <a class="button button-block button-balanced" href="#/transfers/new">+ New Transfer</a>
+
+    <ion-list>
+      <ion-item ng-repeat="transfer in transfers" type="item-text-wrap" href="#/tab/friend/{{friend.id}}">
+        <h2>{{transfer.name}}</h2>
+        <p>{{transfer.amount}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
