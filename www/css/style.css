@@ -1,1 +1,15 @@
 /* Empty. Add your own CSS if you like */
+.bg-blue{
+    background-color: #4a87ee;
+}
+
+.full-width{
+    width: 100%;
+}
+
+.hide-this-div{
+   
+}
+.tabs{
+    display:none;
+}

@@ -1,13 +1,35 @@
-<ion-view title="Dashboard">
+<!-- TODO BG colour setup should be applied to other elements as well. -->
+<ion-view class="bg-blue" title="Pikasiirto">
   <ion-content class="padding">
-    <h1>Alex Hanhikoski</h1>
+    <h1 class="light">Alex Hanhikoski</h1>
     <a class="button button-block button-balanced" href="#/transfers/new">+ New Transfer</a>
 
-    <ion-list>
-      <ion-item ng-repeat="transfer in transfers" type="item-text-wrap" href="#/tab/friend/{{friend.id}}">
-        <h2>{{transfer.name}}</h2>
-        <p>{{transfer.amount}}</p>
-      </ion-item>
+    <!-- TODO couldn't set buttons on right side of the list -->
+    <!-- Hard to override hack css  -->
+
+    <ion-list class="col-80">
+      <div class="calm" ng-repeat="transfer in transfers">
+        <div class="item item-avatar item-button-right">
+          <!-- todo nicer pic -->
+          <img src="http://placekitten.com/g/90/90">
+
+            <h2>{{transfer.name}}</h2>
+            <p>{{transfer.amount}}</p>
+            <a href="#/transfers/new" class="button button-positive">
+            <!-- todo icon -->
+            <i class="icon ion-arrow-return-left"></i>
+          </a>
+        </div>
+      </div>
     </ion-list>
+
+    <!-- <div class="col-20 fuck-this-div"> -->
+    <!--   <button class="button icon ion-star"></button> -->
+    <!--   <a href="#/transfers/new"> -->
+    <!--     <i class="icon ion-star"></i> -->
+    <!--   </a> -->
+    <!-- </div> -->
+
+
   </ion-content>
 </ion-view>
