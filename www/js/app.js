@@ -35,6 +35,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       templateUrl: 'templates/transfers-new.html'
     })
 
+    .state('transfersnew', {
+      url: "/transfers/submit",
+      templateUrl: 'templates/transfers-submit.html'
+    })
+
     // setup an abstract state for the tabs directive
     .state('tab', {
       url: "/tab",
